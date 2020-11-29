@@ -19,10 +19,6 @@
 			"type": "string",
 			"defaultValue": "https://dataresource11.dfs.core.windows.net"
 		},
-		"Hdfs1_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "D:\\NUMERICA\\Jobs\\OPIANALYTICS"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -58,9 +54,6 @@
 					},
 					"AzureLinkedServiceG2_properties_typeProperties_url": {
 						"value": "[parameters('AzureLinkedServiceG2_properties_typeProperties_url')]"
-					},
-					"Hdfs1_properties_typeProperties_url": {
-						"value": "[parameters('Hdfs1_properties_typeProperties_url')]"
 					}
 				}
 			},

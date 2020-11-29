@@ -18,10 +18,6 @@
 		"AzureLinkedServiceG2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dataresource11.dfs.core.windows.net"
-		},
-		"Hdfs1_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "D:\\NUMERICA\\Jobs\\OPIANALYTICS"
 		}
 	},
 	"variables": {
@@ -54,20 +50,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('AzureStorageLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Hdfs1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "Hdfs",
-				"typeProperties": {
-					"url": "[parameters('Hdfs1_properties_typeProperties_url')]",
-					"authenticationType": "Anonymous"
 				}
 			},
 			"dependsOn": []
@@ -186,7 +168,9 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
-									"recursive": true
+									"recursive": true,
+									"wildcardFolderPath": "**",
+									"wildcardFileName": "*"
 								},
 								"formatSettings": {
 									"type": "DelimitedTextReadSettings"
@@ -196,7 +180,7 @@
 								"type": "DelimitedTextSink",
 								"storeSettings": {
 									"type": "AzureBlobStorageWriteSettings",
-									"copyBehavior": "PreserveHierarchy"
+									"copyBehavior": "MergeFiles"
 								},
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
