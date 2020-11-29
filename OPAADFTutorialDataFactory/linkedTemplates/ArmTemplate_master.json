@@ -7,9 +7,21 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "OPAADFTutorialDataFactory"
 		},
+		"AzureLinkedServiceG2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureLinkedServiceG2'"
+		},
 		"AzureStorageLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
+		},
+		"AzureLinkedServiceG2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://dataresource11.dfs.core.windows.net"
+		},
+		"Hdfs1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "D:\\NUMERICA\\Jobs\\OPIANALYTICS"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +50,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureLinkedServiceG2_accountKey": {
+						"value": "[parameters('AzureLinkedServiceG2_accountKey')]"
+					},
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
+					},
+					"AzureLinkedServiceG2_properties_typeProperties_url": {
+						"value": "[parameters('AzureLinkedServiceG2_properties_typeProperties_url')]"
+					},
+					"Hdfs1_properties_typeProperties_url": {
+						"value": "[parameters('Hdfs1_properties_typeProperties_url')]"
 					}
 				}
 			},

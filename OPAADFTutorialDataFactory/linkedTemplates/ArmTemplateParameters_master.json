@@ -5,8 +5,17 @@
 		"factoryName": {
 			"value": "OPAADFTutorialDataFactory"
 		},
+		"AzureLinkedServiceG2_accountKey": {
+			"value": ""
+		},
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
+		},
+		"AzureLinkedServiceG2_properties_typeProperties_url": {
+			"value": "https://dataresource11.dfs.core.windows.net"
+		},
+		"Hdfs1_properties_typeProperties_url": {
+			"value": "D:\\NUMERICA\\Jobs\\OPIANALYTICS"
 		},
 		"containerUri": {
 			"value": ""
