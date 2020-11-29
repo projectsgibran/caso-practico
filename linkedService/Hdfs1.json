@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "Hdfs",
 		"typeProperties": {
-			"url": "https://salrsuse2tcccmbrtest0001.blob.core.windows.net/tamales-inc?sv=2019-12-12&st =2020-11-25T15%3A09%3A53Z&se=2021-01-26T15%3A09%3A00Z&sr=c&sp=rl&sig=9 Yno6FlftjTUdu6BJXR9JfYa%2BuEu4HNCCOkp1Q7E2cs%3D",
+			"url": "D:\\NUMERICA\\Jobs\\OPIANALYTICS",
 			"authenticationType": "Anonymous"
 		}
 	}
