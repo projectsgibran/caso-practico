@@ -10,12 +10,9 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "*",
-				"folderPath": "**",
-				"container": {
-					"value": "adfcontainer",
-					"type": "Expression"
-				}
+				"fileName": "ventas_mensuales_Centro.csv",
+				"folderPath": "opcontainer/crudo/generador/fuente/20200801/Centro",
+				"container": "opiaadfcontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
